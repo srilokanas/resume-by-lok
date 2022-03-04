@@ -6,12 +6,11 @@
 a {
     text-decoration: none;
 }
-ul {
-    list-style-type: none;
-}
 ul li {
+    list-style-type: none;
     display: inline;
 }
+
 p {
     text-align: justify;
 }
@@ -35,26 +34,18 @@ p {
     justify-content: center;
     background: rgba(0, 162, 233, 0.5)
 }
-.header_text {
-    color: #fff;
-    text-align: center;
-}
+
 .header_text h1 {
     font-size: 4rem;
     padding: 1rem;
     color: #fff;
+    text-align: center;
 }
 .header_text p {
     padding: 0.5rem;
     font-size: 2rem;
-}
-@media screen and (max-width: 480px) {
-    .header_text h1 {
-        font-size: 1rem;
-    }
-    .header_text p {
-        font-size: 0.5rem;
-    }
+    color: #fff;
+    text-align: center;
 }
 @media screen and (max-width: 768px) {
     .header_text h1 {
@@ -65,17 +56,22 @@ p {
     }
 }
 
-.navbar {
-    width: 8rem;
-    background-color: #1c2201;
-    display: grid;
-    grid-template-columns: 1fr;
-    z-index: 999;
-    float: right;
-    right: 5%;
-            
+@media screen and (max-width: 480px) {
+    .header_text h1 {
+        font-size: 1.5rem;
+    }
+    .header_text p {
+        font-size: 0.75rem;
+    }
 }
-.navbar > a {
+
+
+.navbar {
+    background-color: #1c2201;
+    overflow: hidden;
+    float: right;
+}
+.navbar a {
     color: #fff;
     display: block;
     font-size: 1rem;
@@ -87,43 +83,42 @@ p {
     background-color: #00a2e9;
     cursor: pointer;
 }
-
+.main {
+    padding: 1rem;
+}
 .sticky {
   position: fixed;
   top: 5%;
+  right: 5%;
+  width: 10%;
 }
-.navbar .icon {
-  display: none;
+.sticky + .main {
+    padding-top: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .sticky {
+      width: 20%;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  .navbar {
-      width: 100%;
-      float: none;
-  }
-  .navbar a:not(.icon) {
-      display: none;
+@media screen and (max-width: 480px) {
+  
+    .navbar {
+        float: none;        
     }
-  .navbar a.icon {
-    float: right;
-    display: block;
+    .navbar a {
+        display: inline;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        margin: auto;
+    }
+  
+    .sticky {
+        top: 0;
+        right: 0;
+      width: 100%;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .navbar.responsive {position: relative;}
-  .navbar.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navbar.responsive a {
-    float: none;
-    display: block;
-    text-align: center;
-  }
-}
-
 h1{
     text-transform: uppercase;
     text-align: center;
@@ -155,8 +150,17 @@ h1{
 }
 @media screen and (max-width: 768px) {
     #profile {
-        grid-template-columns: 1fr;
-        height: 150vh;
+        display: flex;
+        flex-direction: column;
+        height: 125vh;
+    }
+}
+@media screen and (max-width: 480px) {
+    #profile {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+
     }
 }
 #experiences {
@@ -210,8 +214,9 @@ h1{
 
 @media screen and (max-width: 768px) {
     .education {
-        height: 100vh;
-        grid-template-columns: 1fr;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
     }
     
     .education > .institution {
@@ -223,7 +228,8 @@ h1{
     }
     .career {
         height: 50vh;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
     .career > .office {
         float: none;
@@ -232,7 +238,32 @@ h1{
         float: none;
     }
 }
+@media screen and (max-width: 480px) {
+    .education {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .education > .institution {
+        float: none;
 
+    }
+    .education > .description {
+        float: none;
+    }
+    .career {
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .career > .office {
+        float: none;
+    }
+    .career > .description {
+        float: none;
+    }
+}
 #abilities {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -285,13 +316,45 @@ h1{
 .tool > ul {
     padding: 1rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     #abilities {
-     height: 150vh;
-     grid-template-columns: 1fr;    
+        height: 100vh;
+    }
+    .skill_item {
+        grid-template-columns: 1fr;
+    }
+    .language {
+        grid-template-columns: 1fr;
+    }
+    .tool {
+        grid-template-columns: 1fr;
     }
 }
 
+@media screen and (max-width: 768px) {
+    #abilities {
+     height: 150vh;
+     display: flex;
+     flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #abilities {
+     height: 225vh;
+     display: flex;
+     flex-direction: column;
+    }
+    .skill_item {
+        grid-template-columns: 1fr;
+    }
+    .language {
+        grid-template-columns: 1fr;
+    }
+    .tool {
+        grid-template-columns: 1fr;
+    }
+}
 
 #projects {
     background-color: #d9d9d9;
@@ -321,24 +384,36 @@ h1{
     padding: 1rem;
     font-size: 1.5rem;
 }
+
 @media screen and (max-width: 768px) { 
     .project {
         height: 200vh;
-        grid-template-columns: auto;
+        display: flex;
+        flex-direction: column;
     }
     .project figcaption {
         font-size: 1rem;
     }
 }
+
+@media screen and (max-width: 480px) { 
+    .project {
+        height: 125vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .project figcap tion {
+        font-size: 1rem;
+    }
+}
+
 #contact {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-content: center;
-    grid-template-columns: auto auto;
-    gap: 1rem;
     padding: 1rem;
     width: 100vw;
-    height: 25vh;
+    height: 20vh;
     
 }
 #contact .info {
@@ -346,4 +421,19 @@ h1{
     margin-left: auto;
     margin-right: auto;
    
+}
+@media screen and (max-width: 768px) { 
+    #contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        justify-content: center;
+        align-content: center;
+    }
+}
+@media screen and (max-width: 480px) { 
+    #contact {
+        display: flex;
+        flex-direction: column;
+    }
 }
