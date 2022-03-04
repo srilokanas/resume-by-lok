@@ -151,7 +151,7 @@ h1{
     #profile {
         display: flex;
         flex-direction: column;
-        height: 125vh;
+        height: 100vh;
     }
 }
 @media screen and (max-width: 480px) {
@@ -213,7 +213,7 @@ h1{
 
 @media screen and (max-width: 768px) {
     .education {
-        height: 70vh;
+        height: 50vh;
         display: flex;
         flex-direction: column;
     }
@@ -226,7 +226,7 @@ h1{
         float: none;
     }
     .career {
-        height: 50vh;
+        height: 35vh;
         display: flex;
         flex-direction: column;
     }
@@ -325,7 +325,7 @@ h1{
 
 @media screen and (max-width: 768px) {
     #abilities {
-     height: 150vh;
+     height: 100vh;
      display: flex;
      flex-direction: column;
     }
@@ -379,7 +379,7 @@ h1{
 
 @media screen and (max-width: 768px) { 
     .project {
-        height: 200vh;
+        height: 175vh;
         display: flex;
         flex-direction: column;
     }
