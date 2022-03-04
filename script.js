@@ -17,7 +17,7 @@ document.getElementById('age').innerHTML = age ;
 
 window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("navbar");
+var header = document.getElementById("myNavbar");
 var sticky = header.offsetTop;
 
 function myFunction() {
@@ -25,5 +25,14 @@ function myFunction() {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
+  }
+}
+
+function myNavbar() {
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
   }
 }
