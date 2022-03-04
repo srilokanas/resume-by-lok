@@ -130,9 +130,8 @@ h1{
     grid-template-columns: 1fr 1fr 1fr 0.01fr;
     gap: 2rem;
     width: 75vw;
-    height: 50vh;
-    margin-left: auto;
-    margin-right: auto;
+    height: 35vh;
+    margin: auto;
 
 }
 #profile h2 {
@@ -319,15 +318,8 @@ h1{
 @media screen and (max-width: 1024px) {
     #abilities {
         height: 100vh;
-    }
-    .skill_item {
-        grid-template-columns: 1fr;
-    }
-    .language {
-        grid-template-columns: 1fr;
-    }
-    .tool {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
 }
 
